@@ -1,4 +1,4 @@
-pipline {
+pipeline {
     agent any // любой доступный агент
     stages { 
         stage('Checkout') {
