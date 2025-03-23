@@ -3,10 +3,10 @@ pipeline {
     stages { 
         stage('Checkout') {
             steps{
-                git 'https://github.com/yemmi17/simple_jenkins_project.git'
+                git branch: 'main', url: 'https://github.com/yemmi17/simple_jenkins_project.git'
             }
         }
-        stage('Install dependecies'){
+        stage('Install dependecies'){ 
             steps{
                 sh 'pip install -r requirements.txt'
             }
