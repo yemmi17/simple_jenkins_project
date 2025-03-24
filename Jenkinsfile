@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages { 
         stage('Checkout') {
             steps {
@@ -8,7 +7,9 @@ pipeline {
             }
         }
 
-        stage('Install Docker') {
+ /*     Т.к разраб клоун немного и делал все на винде, через wsl. Сначала делал, а потом думал, но убирать не хочу ))  
+        пусть лежит тут и напоминает мне о былой рукожопости
+        stage('Install Docker') { 
             steps {
                 sh '''
                     if ! command -v docker &> /dev/null
@@ -25,7 +26,7 @@ pipeline {
                     fi
                 '''
             }
-        }
+        }*/
 
         stage('Create Virtual Environment') {
             steps {
@@ -46,7 +47,7 @@ pipeline {
             steps {
                 sh '''
                     export PATH=$PWD/venv/bin:$PATH
-                    python -m unittest test_api.py
+                    python -m unittest test_api.py  
                 '''
             }
         } 
