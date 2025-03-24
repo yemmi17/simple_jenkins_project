@@ -48,7 +48,7 @@ python -m unittest discover tests
 - Включите GitHub Webhook в настройках репозитория (Settings → Webhooks)
 
 # 2. Структура Jenkinsfile
-
+```
 pipeline {
     agent any
     triggers {
@@ -87,7 +87,7 @@ pipeline {
         }
     }
 }
-
+```
 ## 📌 Автоматический запуск
 
 - Используйте GitHub Webhooks для автоматического триггера пайплайна при git push
